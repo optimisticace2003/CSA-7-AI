@@ -1,0 +1,12 @@
+female(carmel).
+female(regina).
+male(pascol).
+male(peter).
+male(prevail).
+parent(pascol,peter).
+parent(carmel,peter).
+parent(peter,prevail).
+parent(regina,prevail).
+mother(X,Y):-parent(X,Y),female(X).
+father(X,Y):-parent(X,Y),male(X).
+haschild(X):-parent(X,_).

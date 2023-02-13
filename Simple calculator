@@ -1,0 +1,43 @@
+def add(a,b):
+    print(a+b)
+def sub(a,b):
+    print(a-b)
+def div(a,b):
+    try:
+        print(a/b)
+    except:
+        print("Division by zero")
+def mul(a,b):
+    print(a*b)
+def mod(a,b):
+    print(a%b)
+def cal():
+    while True:
+        ch=int(input("Enter your choice:"))
+        a=int(input("Enter num1:"))
+        b=int(input("Enter num2:"))
+        if ch==1:
+            add(a,b)
+            break
+        elif ch==2:
+            sub(a,b)
+            break
+        elif ch==3:
+            mul(a,b)
+            break
+        elif ch==4:
+            div(a,b)
+            break
+        elif ch==5:
+            mod(a,b)
+            break
+        else:
+            print("Enter correct option.")
+            break
+    f=input("Do you want to continue:(yes/no)")
+    if f=="no":
+        print("  ")
+    else:
+        cal()
+print("1.ADDITION.\n2.SUBTRACTION.\n3.MULTIPLICATION.\n4.DIVISION.\n5.MODULUS.")    
+cal()
